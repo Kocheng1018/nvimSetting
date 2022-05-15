@@ -104,9 +104,12 @@ nmap <silent> <Leader>< :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 nmap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nmap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
+" -----------
+
 so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/defxConfig.vim	
 " so ~/.config/nvim/defxConfigFloating.vim
 so ~/.config/nvim/nerdcommenterConfig.vim	
 so ~/.config/nvim/cocConfig.vim	
+so ~/.config/nvim/fzfConfig.vim	
 
