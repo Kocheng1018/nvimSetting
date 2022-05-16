@@ -32,6 +32,7 @@ set autoindent
 set incsearch
 set autoindent
 set cindent
+set clipboard=unnamed
 
 " Give more space for displaying messages.
 set cmdheight=2
@@ -78,7 +79,8 @@ let g:lightline = {
 			\}
 let g:airline_theme="onedark"
 
-let mapleader = ","
+let mapleader = "\<Space>"
+nnoremap <SPACE> <Nop>
 
 " ------------
 " Windows
@@ -105,11 +107,13 @@ nmap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nmap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " -----------
+" markup
+map <silent> <Leader>/ <Plug>(caw:hatpos:toggle)
 
 so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/defxConfig.vim	
 " so ~/.config/nvim/defxConfigFloating.vim
-so ~/.config/nvim/nerdcommenterConfig.vim	
+" so ~/.config/nvim/nerdcommenterConfig.vim
 so ~/.config/nvim/cocConfig.vim	
 so ~/.config/nvim/fzfConfig.vim	
 

@@ -10,11 +10,16 @@ call plug#begin('~/.vim/plugged')
 	Plug 'sheerun/vim-polyglot'
 
 	" 註解
-	Plug 'preservim/nerdcommenter'
+	Plug 'tyru/caw.vim'
+	" 註解檔案類型及當下光標的語言類型判斷文件
+	Plug 'Shougo/context_filetype.vim'
 
 	" color scheme
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
+
+	" vue highlight
+	Plug 'posva/vim-vue'
 
 	" fxf
 	Plug 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
