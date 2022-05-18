@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
 	Plug 'jiangmiao/auto-pairs'
 
 	" defx file sys
@@ -21,9 +20,17 @@ call plug#begin('~/.vim/plugged')
 	" vue highlight
 	Plug 'posva/vim-vue'
 
-	" fxf
+	" auto save
+	Plug '907th/vim-auto-save'
+
+" fxf
 	Plug 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
 	Plug 'junegunn/fzf.vim' " needed for previews
 	Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'antoinemadec/coc-fzf'
+
+	" git
+	Plug 'tpope/vim-fugitive'
+
+	" colorscheme
 call plug#end()

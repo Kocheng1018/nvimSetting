@@ -1,10 +1,50 @@
 " 編碼
 set encoding=utf8
 set fileencodings=utf8
+" ------------
+let g:vue_pre_processors = ['pug', 'scss']
+"  colorscheme
 " 终端显示256色
 set t_Co=256                    
+" 開啟程式碼highlight。
+syntax enable 
+" 開啟超過256色
+if has("termguicolors")
+    " fix bug for vim
+    set t_8f=^[[38;2;%lu;%lu;%lum
+    set t_8b=^[[48;2;%lu;%lu;%lum
 
-" 顯示行號。跟昨天說的:[number]搭配。
+    " enable true color
+    set termguicolors
+endif
+
+"-----------
+" onedark
+" let g:lightline = {
+"			\ 'colorscheme': 'onedark'
+"			\}
+" let g:airline_theme="onedark"
+" 
+" colorscheme onedark
+
+" -----------
+" one
+" let g:airline_theme='one'
+" let g:one_allow_italics = 1 " italic for comments
+" set background=dark
+" colorscheme one
+" -----------
+" nord
+" colorscheme nord
+
+" -----------
+" solarized8
+set background=dark
+let g:solarized_statusline="low"
+colorscheme solarized8_low
+
+" ------------
+" 顯示行號[number]搭配。
 set nu 
 " 自動對齊縮排，會保留上一行的tab數。
 set ai 
@@ -71,13 +111,6 @@ set showmode
 
 " 它是用來看每個檔案的檔名已決定要用哪種縮排方式
 filetype indent on 
-" 開啟程式碼highlight。
-syntax enable 
-colorscheme onedark
-let g:lightline = {
-			\ 'colorscheme': 'onedark'
-			\}
-let g:airline_theme="onedark"
 
 let mapleader = "\<Space>"
 nnoremap <SPACE> <Nop>
@@ -108,12 +141,18 @@ nmap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " -----------
 " markup
-map <silent> <Leader>/ <Plug>(caw:hatpos:toggle)
+map <silent> <Leader>c <Plug>(caw:hatpos:toggle)
+
+" -----------
+" autoSave
+let g:auto_save = 1
+" ------------
+" :noh
+map <esc> :noh <CR>
 
 so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/defxConfig.vim	
 " so ~/.config/nvim/defxConfigFloating.vim
-" so ~/.config/nvim/nerdcommenterConfig.vim
 so ~/.config/nvim/cocConfig.vim	
 so ~/.config/nvim/fzfConfig.vim	
 
