@@ -150,9 +150,13 @@ let g:auto_save = 1
 " :noh
 map <esc> :noh <CR>
 
+" ------------
+" :startify
+let g:startify_change_to_vcs_root = 0
+
 so ~/.config/nvim/plugins.vim
 so ~/.config/nvim/defxConfig.vim	
 " so ~/.config/nvim/defxConfigFloating.vim
-so ~/.config/nvim/cocConfig.vim	
-so ~/.config/nvim/fzfConfig.vim	
+so ~/.config/nvim/cocExtensions/cocConfig.vim	
+so ~/.config/nvim/cocExtensions/cocfzfpreviewConfig.vim
 

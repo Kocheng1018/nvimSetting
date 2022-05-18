@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
 	Plug 'kristijanhusak/defx-icons'
 
 	Plug 'sheerun/vim-polyglot'
-
 	" 註解
 	Plug 'tyru/caw.vim'
 	" 註解檔案類型及當下光標的語言類型判斷文件
@@ -25,12 +24,18 @@ call plug#begin('~/.vim/plugged')
 
 " fxf
 	Plug 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
-	Plug 'junegunn/fzf.vim' " needed for previews
+	" Plug 'junegunn/fzf.vim' " needed for previews
 	Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'antoinemadec/coc-fzf'
 
 	" git
 	Plug 'tpope/vim-fugitive'
+
+	" start screen
+	Plug 'mhinz/vim-startify'
+
+	" icons
+	Plug 'ryanoasis/vim-devicons'
 
 	" colorscheme
 call plug#end()
