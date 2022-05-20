@@ -35,6 +35,11 @@
 	// 用於修改 Emmet 的某些操作和解析器的行為的首選項。	{}
 	"emmet.preferences": {},
 
-	"eslint.autoFixOnSave": true
+	"eslint.autoFixOnSave": true,
+
+	"pairs.disableLanguages": [],
+	"pairs.enableCharacters": ["(", "[", "{", "<", "'", "\"", "`"],
+	// imap for backspace to remove paired characters, default: true, 
+	"pairs.enableBackspace": true  
 
 }

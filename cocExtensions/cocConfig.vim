@@ -7,7 +7,9 @@ let g:coc_global_extensions = [
 \ 'coc-vetur',
 \ 'coc-emmet',
 \ 'coc-highlight',
-\ 'coc-fzf-preview'
+\ 'coc-fzf-preview',
+\ 'coc-pairs',
+\ 'coc-spell-checker'
 \ ]
 
 " 用 tab 鍵觸發自動補全
@@ -147,3 +149,7 @@ nnoremap <silent><nowait> \j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> \k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> \p  :<C-u>CocListResume<CR>
+
+" -------coc-spell-checker---------
+vmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>a <Plug>(coc-codeaction-selected)

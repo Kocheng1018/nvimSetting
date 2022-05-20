@@ -1,6 +1,5 @@
 call plug#begin('~/.vim/plugged')
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}
-	Plug 'jiangmiao/auto-pairs'
 
 	" defx file sys
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
@@ -36,6 +35,15 @@ call plug#begin('~/.vim/plugged')
 
 	" icons
 	Plug 'ryanoasis/vim-devicons'
+
+	" show who commit this line in git
+	Plug 'APZelos/blamer.nvim'
+
+	" Delete/change/add parentheses/quotes/XML-tags/much more with ease
+	Plug 'tpope/vim-surround'
+
+	"autotag
+	Plug 'craigemery/vim-autotag'
 
 	" colorscheme
 call plug#end()

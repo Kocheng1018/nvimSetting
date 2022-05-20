@@ -13,7 +13,6 @@ if has("termguicolors")
     " fix bug for vim
     set t_8f=^[[38;2;%lu;%lu;%lum
     set t_8b=^[[48;2;%lu;%lu;%lum
-
     " enable true color
     set termguicolors
 endif
@@ -72,7 +71,7 @@ set autoindent
 set incsearch
 set autoindent
 set cindent
-set clipboard=unnamed
+set clipboard+=unnamed
 
 " Give more space for displaying messages.
 set cmdheight=2
@@ -109,6 +108,8 @@ set tabpagemax=15
 " 显示当前mode
 set showmode  
 
+set wildmode=list:longest,full
+
 " 它是用來看每個檔案的檔名已決定要用哪種縮排方式
 filetype indent on 
 
@@ -131,13 +132,10 @@ map <C-h> <C-w>h
 map <C-k> <C-w>k
 map <C-j> <C-w>j
 map <C-l> <C-w>l
+map <C-q> <C-w>q
 " --------------
 " Resize window
 nmap <silent> <Leader>= <C-w>=
-nmap <silent> <Leader>> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
-nmap <silent> <Leader>< :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
-nmap <silent> <Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
-nmap <silent> <Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 
 " -----------
 " markup
@@ -146,6 +144,7 @@ map <silent> <Leader>c <Plug>(caw:hatpos:toggle)
 " -----------
 " autoSave
 let g:auto_save = 1
+
 " ------------
 " :noh
 map <esc> :noh <CR>
@@ -154,9 +153,14 @@ map <esc> :noh <CR>
 " :startify
 let g:startify_change_to_vcs_root = 0
 
-so ~/.config/nvim/plugins.vim
-so ~/.config/nvim/defxConfig.vim	
-" so ~/.config/nvim/defxConfigFloating.vim
-so ~/.config/nvim/cocExtensions/cocConfig.vim	
-so ~/.config/nvim/cocExtensions/cocfzfpreviewConfig.vim
+" ------------
+" alias replace all each ask
+nnoremap S :%s//gc<Left><Left><Left>
+
+so $HOME/.config/nvim/plugins.vim
+so $HOME/.config/nvim/defxConfig.vim	
+so $HOME/.config/nvim/blamerConfig.vim	
+" so $HOME/.config/nvim/defxConfigFloating.vim
+so $HOME/.config/nvim/cocExtensions/cocConfig.vim	
+so $HOME/.config/nvim/cocExtensions/cocfzfpreviewConfig.vim
 
