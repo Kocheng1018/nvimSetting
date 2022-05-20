@@ -2,12 +2,19 @@
 set encoding=utf8
 set fileencodings=utf8
 " ------------
+" 預設vue預處理器
 let g:vue_pre_processors = ['pug', 'scss']
+
+" remove trailing whitespace on save
+autocmd BufWritePre * %s/\s\+$//e
+
 "  colorscheme
 " 终端显示256色
-set t_Co=256                    
+set t_Co=256
+
 " 開啟程式碼highlight。
-syntax enable 
+syntax enable
+
 " 開啟超過256色
 if has("termguicolors")
     " fix bug for vim
@@ -23,7 +30,6 @@ endif
 "			\ 'colorscheme': 'onedark'
 "			\}
 " let g:airline_theme="onedark"
-" 
 " colorscheme onedark
 
 " -----------
@@ -32,9 +38,6 @@ endif
 " let g:one_allow_italics = 1 " italic for comments
 " set background=dark
 " colorscheme one
-" -----------
-" nord
-" colorscheme nord
 
 " -----------
 " solarized8
@@ -44,40 +47,41 @@ colorscheme solarized8_low
 
 " ------------
 " 顯示行號[number]搭配。
-set nu 
+set nu
 " 自動對齊縮排，會保留上一行的tab數。
-set ai 
+set ai
 " 可以不保存切換buffer
-set hidden 
+set hidden
 " 打字的那行會有底線。
-set cursorline 
+set cursorline
 " 按一次tab縮排幾個空白
-set tabstop=2 
+set tabstop=2
 " 按一次tab要有幾個空白的大小。
-set shiftwidth=2 
+set shiftwidth=2
 " 把搜尋結果highlight起來
-set hlsearch 
+set hlsearch
 " 自動縮排，會比較像一般程式編輯器
-set cindent 
+set cindent
 " 開啟狀態列，設1就會關掉。
-set laststatus=2 
+set laststatus=2
 " 句子過長的自動換行
 set nowrap
+" 啟用滑鼠
+set mouse=a
 set nobackup
 set nowritebackup
-set mouse=a
 set showcmd
 set autoindent
 set incsearch
 set autoindent
 set cindent
+" 剪下複製功能同步到剪貼簿
 set clipboard+=unnamed
 
-" Give more space for displaying messages.
+" 底部 cmd 高度
 set cmdheight=2
 
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
+" vim 更新時間 default 4000ms
 set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
@@ -93,26 +97,28 @@ else
 endif
 
 " 检索时高亮显示匹配项
-set hlsearch   
+set hlsearch
 " 边输入边搜索
-set incsearch    
+set incsearch
 " 搜索忽略大小写
-set ignorecase                  
+set ignorecase
 " 智能大小写搜索
-set smartcase                   
+set smartcase
 set smartindent
 
 " 最多15个Tab
-set tabpagemax=15  
+set tabpagemax=15
 
 " 显示当前mode
-set showmode  
+set showmode
 
+" 指令提示視窗
 set wildmode=list:longest,full
 
-" 它是用來看每個檔案的檔名已決定要用哪種縮排方式
-filetype indent on 
+" 用來看每個檔案的檔名 && 已決定要用哪種縮排方式
+filetype indent on
 
+" 設定leader 按鍵
 let mapleader = "\<Space>"
 nnoremap <SPACE> <Nop>
 
@@ -134,7 +140,7 @@ map <C-j> <C-w>j
 map <C-l> <C-w>l
 map <C-q> <C-w>q
 " --------------
-" Resize window
+" 均分 window
 nmap <silent> <Leader>= <C-w>=
 
 " -----------
@@ -146,7 +152,7 @@ map <silent> <Leader>c <Plug>(caw:hatpos:toggle)
 let g:auto_save = 1
 
 " ------------
-" :noh
+" :noh 取消高亮
 map <esc> :noh <CR>
 
 " ------------
@@ -158,9 +164,9 @@ let g:startify_change_to_vcs_root = 0
 nnoremap S :%s//gc<Left><Left><Left>
 
 so $HOME/.config/nvim/plugins.vim
-so $HOME/.config/nvim/defxConfig.vim	
-so $HOME/.config/nvim/blamerConfig.vim	
+so $HOME/.config/nvim/defxConfig.vim
+so $HOME/.config/nvim/blamerConfig.vim
 " so $HOME/.config/nvim/defxConfigFloating.vim
-so $HOME/.config/nvim/cocExtensions/cocConfig.vim	
+so $HOME/.config/nvim/cocExtensions/cocConfig.vim
 so $HOME/.config/nvim/cocExtensions/cocfzfpreviewConfig.vim
 
