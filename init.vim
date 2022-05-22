@@ -163,6 +163,10 @@ let g:startify_change_to_vcs_root = 0
 " alias replace all each ask
 nnoremap S :%s//gc<Left><Left><Left>
 
+" ------------
+" ctrl
+nmap :Q :q
+
 so $HOME/.config/nvim/plugins.vim
 so $HOME/.config/nvim/defxConfig.vim
 so $HOME/.config/nvim/blamerConfig.vim
