@@ -18,9 +18,9 @@ let g:blamer_relative_time = 1
 let g:blamer_prefix = ' '
 
 " 顯示的 template 樣式 default '<committer>, <committer-time> • <summary>'
-"Available options: 
-" <author>, <author-mail>, <author-time>, 
-" <committer>, <committer-mail>, <committer-time>, 
-" <summary>, 
+"Available options:
+" <author>, <author-mail>, <author-time>,
+" <committer>, <committer-mail>, <committer-time>,
+" <summary>,
 " <commit-short>, <commit-long>.
 let g:blamer_template = '>> <committer>, <committer-time> • <summary>'

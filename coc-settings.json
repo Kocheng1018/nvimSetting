@@ -5,14 +5,15 @@
 	// 顯示擴展的 Emmet 縮寫作為建議。	"always"
 	"emmet.showExpandedAbbreviation": "always",
 
-	"coc.preferences.formatOnSaveFiletypes": [
-			"javascript",
-			"javascriptreact",
-			"typescript",
-			"typescriptreact"
-		],
+	// "coc.preferences.formatOnSaveFiletypes": [
+	// 		"javascript",
+	// 		"javascriptreact",
+	// 		"typescript",
+	// 		"typescriptreact"
+	// 	],
 	"tsserver.formatOnType": true,
 	"coc.preferences.formatOnType": true,
+	"diagnostic.checkCurrentLine": true,
 
 	// 顯示 Emmet 縮寫作為建議。不適用於樣式表或 emmet.showExpandedAbbreviationis "never"。	true
 	"emmet.showAbbreviationSuggestions"	: true,

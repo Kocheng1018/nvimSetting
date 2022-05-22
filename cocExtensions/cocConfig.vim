@@ -1,7 +1,6 @@
 let g:coc_global_extensions = [
 \ 'coc-css',
 \ 'coc-eslint',
-\ 'coc-prettier',
 \ 'coc-html',
 \ 'coc-json',
 \ 'coc-tsserver',
@@ -30,11 +29,6 @@ if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
 else
   inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" check have eslint prettier
-if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
-  let g:coc_global_extensions += ['coc-prettier']
 endif
 
 if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')

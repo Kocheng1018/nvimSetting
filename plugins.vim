@@ -21,14 +21,14 @@ call plug#begin('~/.vim/plugged')
 	" auto save
 	Plug '907th/vim-auto-save'
 
-" fxf
+	" fxf
 	Plug 'junegunn/fzf', {'dir': '~/.fzf','do': './install --all'}
-	" Plug 'junegunn/fzf.vim' " needed for previews
-	Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 	Plug 'antoinemadec/coc-fzf'
 
 	" git
 	Plug 'tpope/vim-fugitive'
+	Plug 'airblade/vim-gitgutter'
+  Plug 'mhinz/vim-signify'
 
 	" start screen
 	Plug 'mhinz/vim-startify'
@@ -44,6 +44,10 @@ call plug#begin('~/.vim/plugged')
 
 	"autotag
 	Plug 'craigemery/vim-autotag'
+
+	" markDown
+	Plug 'godlygeek/tabular'
+	Plug 'preservim/vim-markdown'
 
 	" colorscheme
 call plug#end()

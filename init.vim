@@ -48,6 +48,7 @@ colorscheme solarized8_low
 " ------------
 " 顯示行號[number]搭配。
 set nu
+set signcolumn=yes
 " 自動對齊縮排，會保留上一行的tab數。
 set ai
 " 可以不保存切換buffer
@@ -82,19 +83,10 @@ set clipboard+=unnamed
 set cmdheight=2
 
 " vim 更新時間 default 4000ms
-set updatetime=300
+set updatetime=100
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
-
-" Always show the signcolumn, otherwise it would shift the text each time
-" diagnostics appear/become resolved.
-if has("nvim-0.5.0") || has("patch-8.1.1564")
-  " Recently vim can merge signcolumn and number column into one
-  set signcolumn=number
-else
-  set signcolumn=yes
-endif
 
 " 检索时高亮显示匹配项
 set hlsearch
