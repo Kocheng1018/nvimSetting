@@ -1,6 +1,7 @@
 let g:coc_global_extensions = [
 \ 'coc-css',
 \ 'coc-eslint',
+\ 'coc-prettier',
 \ 'coc-html',
 \ 'coc-json',
 \ 'coc-tsserver',
@@ -11,7 +12,6 @@ let g:coc_global_extensions = [
 \ 'coc-pairs',
 \ 'coc-spell-checker'
 \ ]
-
 " 用 tab 鍵觸發自動補全
 " 注意：載入設定後記得用命令 `verbose imap <tab>` 確定這沒有被其他外掛覆蓋掉
 inoremap <silent><expr> <TAB>
@@ -30,6 +30,15 @@ if has('nvim')
   inoremap <silent><expr> <c-space> coc#refresh()
 else
   inoremap <silent><expr> <c-@> coc#refresh()
+endif
+
+" check have eslint prettier
+if isdirectory('./node_modules') && isdirectory('./node_modules/prettier')
+  let g:coc_global_extensions += ['coc-prettier']
+endif
+
+if isdirectory('./node_modules') && isdirectory('./node_modules/eslint')
+  let g:coc_global_extensions += ['coc-eslint']
 endif
 
 " 讓 enter 鍵自動完成第一個建議並讓 coc 進行格式化（不確定個格式化指的是什麼，我看不太出來）
