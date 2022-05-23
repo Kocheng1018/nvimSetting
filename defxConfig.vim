@@ -74,11 +74,14 @@ autocmd FileType defx call s:defx_my_settings()
 	  \ defx#do_action('change_vim_cwd')
 	endfunction
 
+let g:defx_icons_column_length = 2
+
 call defx#custom#column('icon', {
       \ 'directory_icon': '▸',
       \ 'opened_icon': '▾',
       \ 'root_icon': ' ',
       \ })
+
 call defx#custom#column('git', 'indicators', {
   \ 'Modified'  : 'M',
   \ 'Staged'    : '✚',
@@ -90,7 +93,7 @@ call defx#custom#column('git', 'indicators', {
   \ 'Unknown'   : '?'
   \ })
 
-call defx#custom#option('_', { 
+call defx#custom#option('_', {
 	\ 'columns': 'git:icons:indent:filename',
 	\ 'buffer_name': 'defx',
 	\ 'show_ignored_files': 1,

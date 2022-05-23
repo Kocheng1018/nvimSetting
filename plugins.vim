@@ -4,6 +4,7 @@ call plug#begin('~/.vim/plugged')
 	" defx file sys
 	Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 	Plug 'kristijanhusak/defx-icons'
+	Plug 'kristijanhusak/defx-git'
 
 	Plug 'sheerun/vim-polyglot'
 	" 註解
