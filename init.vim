@@ -8,43 +8,6 @@ let g:vue_pre_processors = ['pug', 'scss']
 " remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
-"  colorscheme
-" 终端显示256色
-set t_Co=256
-
-" 開啟程式碼highlight。
-syntax enable
-
-" 開啟超過256色
-if has("termguicolors")
-    " fix bug for vim
-    set t_8f=^[[38;2;%lu;%lu;%lum
-    set t_8b=^[[48;2;%lu;%lu;%lum
-    " enable true color
-    set termguicolors
-endif
-
-"-----------
-" onedark
-" let g:lightline = {
-"			\ 'colorscheme': 'onedark'
-"			\}
-" let g:airline_theme="onedark"
-" colorscheme onedark
-
-" -----------
-" one
-" let g:airline_theme='one'
-" let g:one_allow_italics = 1 " italic for comments
-" set background=dark
-" colorscheme one
-
-" -----------
-" solarized8
-set background=dark
-let g:solarized_statusline="low"
-colorscheme solarized8_low
-
 " ------------
 " 顯示行號[number]搭配。
 set nu
@@ -63,12 +26,13 @@ set shiftwidth=2
 set hlsearch
 " 自動縮排，會比較像一般程式編輯器
 set cindent
-" 開啟狀態列，設1就會關掉。
+" 開啟狀態列，設0就會關掉。
 set laststatus=2
 " 句子過長的自動換行
 set nowrap
 " 啟用滑鼠
 set mouse=a
+set title
 set nobackup
 set nowritebackup
 set showcmd
@@ -168,6 +132,7 @@ nmap <Leader>hu <Plug>GitGutterUndoHunk
 nmap <Leader>hp <Plug>GitGutterPreviewHunk
 
 so $HOME/.config/nvim/plugins.vim
+so $HOME/.config/nvim/colorScheme.vim
 so $HOME/.config/nvim/defxConfig.vim
 so $HOME/.config/nvim/blamerConfig.vim
 " so $HOME/.config/nvim/defxConfigFloating.vim
