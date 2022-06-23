@@ -50,5 +50,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'godlygeek/tabular'
 	Plug 'preservim/vim-markdown'
 
+	" tailwind
+	Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
+
 	" colorscheme
 call plug#end()

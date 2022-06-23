@@ -5,12 +5,12 @@
 	// 顯示擴展的 Emmet 縮寫作為建議。	"always"
 	"emmet.showExpandedAbbreviation": "always",
 
-	// "coc.preferences.formatOnSaveFiletypes": [
-	// 		"javascript",
-	// 		"javascriptreact",
-	// 		"typescript",
-	// 		"typescriptreact"
-	// 	],
+	"coc.preferences.formatOnSaveFiletypes": [
+			"javascript",
+			"javascriptreact",
+			"typescript",
+			"typescriptreact"
+		],
 	"tsserver.formatOnType": true,
 	"coc.preferences.formatOnType": true,
 	"diagnostic.checkCurrentLine": true,
@@ -77,7 +77,12 @@
 	"cSpell.allowCompoundWords": false,
 
 	// User words to add to dictionary.  Should only be in the user settings.
-	"cSpell.userWords": [],
+	"cSpell.userWords": [
+    "Butsutiki",
+    "Datetime",
+    "apiv",
+    "multpart"
+  ],
 
 	// Specify paths/files to ignore.
 	"cSpell.ignorePaths": [
@@ -89,7 +94,5 @@
 			".git",                // Ignore the .git directory
 			"*.dll",               // Ignore all .dll files.
 			"**/*.dll"             // Ignore all .dll files
-	],
-
-
+	]
 }

@@ -3,13 +3,15 @@ let g:coc_global_extensions = [
 \ 'coc-eslint',
 \ 'coc-html',
 \ 'coc-json',
-\ 'coc-tsserver',
 \ 'coc-vetur',
+\ 'coc-snippets',
+\ 'coc-tsserver',
 \ 'coc-emmet',
 \ 'coc-highlight',
 \ 'coc-fzf-preview',
 \ 'coc-pairs',
-\ 'coc-spell-checker'
+\ 'coc-spell-checker',
+\ 'coc-highlight'
 \ ]
 " 用 tab 鍵觸發自動補全
 " 注意：載入設定後記得用命令 `verbose imap <tab>` 確定這沒有被其他外掛覆蓋掉

@@ -8,6 +8,7 @@ let g:vue_pre_processors = ['pug', 'scss']
 " remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
+autocmd CursorHold * silent call CocActionAsync('highlight')
 " ------------
 " 顯示行號[number]搭配。
 set nu
@@ -77,6 +78,13 @@ filetype indent on
 " 設定leader 按鍵
 let mapleader = "\<Space>"
 nnoremap <SPACE> <Nop>
+" ------------
+"  Tabs
+
+"  Open current directory
+nmap te :tabedit <CR>
+nmap <Tab> :tabnext<Return>
+nmap <S-Tab> :tabprev<Return>
 
 " ------------
 " Windows
@@ -105,7 +113,7 @@ map <silent> <Leader>c <Plug>(caw:hatpos:toggle)
 
 " -----------
 " autoSave
-let g:auto_save = 1
+" let g:auto_save = 1
 
 " ------------
 " :noh 取消高亮
