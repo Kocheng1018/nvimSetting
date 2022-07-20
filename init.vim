@@ -82,7 +82,7 @@ nnoremap <SPACE> <Nop>
 "  Tabs
 
 "  Open current directory
-nmap te :tabedit <CR>
+nmap te :tabnew % <CR>
 nmap <Tab> :tabnext<Return>
 nmap <S-Tab> :tabprev<Return>
 
@@ -130,6 +130,7 @@ nnoremap S :%s//gc<Left><Left><Left>
 " ------------
 " ctrl
 nmap :Q :q
+nmap :W :w
 
 " ------------
 " vim-gitgutter
