@@ -7,7 +7,6 @@ let g:coc_global_extensions = [
 \ 'coc-snippets',
 \ 'coc-tsserver',
 \ 'coc-emmet',
-\ 'coc-highlight',
 \ 'coc-fzf-preview',
 \ 'coc-pairs',
 \ 'coc-spell-checker',

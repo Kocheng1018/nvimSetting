@@ -5,6 +5,9 @@ set fileencodings=utf8
 " 預設vue預處理器
 let g:vue_pre_processors = ['pug', 'scss']
 
+" RRethy/vim-hexokinase color perview
+let g:Hexokinase_highlighters = ['virtual']
+
 " remove trailing whitespace on save
 autocmd BufWritePre * %s/\s\+$//e
 
@@ -122,6 +125,21 @@ map <esc> :noh <CR>
 " ------------
 " :startify
 let g:startify_change_to_vcs_root = 0
+let g:startify_change_to_dir = 0
+let g:startify_custom_header = [
+        \'⠀       ⠀   (\__/) ',
+        \'            (•ㅅ•) ',
+        \'⠀       ＿ノヽ ノ＼＿ ',
+        \'⠀    `/ `/ ⌒Ｙ⌒ Ｙ   ヽ ',
+        \'⠀    ( 　(三ヽ人　 /  | ',
+        \'⠀    |　ﾉ⌒＼ ￣￣ヽ  ノ ',
+        \'⠀    ヽ＿＿＿＞､＿_／ ',
+        \'  ⠀      ｜( 王 ﾉ〈  (\__/) ',
+        \'    ⠀    /ﾐ`ー―彡 \  (•ㅅ•) ',
+        \'     ⠀  / ╰    ╯  \  /    \> ',
+        \ ]
+
+let g:startify_custom_footer = [ ]
 
 " ------------
 " alias replace all each ask
@@ -139,11 +157,18 @@ nmap ]h <Plug>(GitGutterNextHunk)
 nmap [h <Plug>(GitGutterPrevHunk)
 nmap ghp <Plug>(GitGutterPreviewHunk)
 
+" ----------
+" markdown
+let g:vim_markdown_folding_disabled = 1
+let g:mkdp_auto_start = 0
+let g:mkdp_theme = 'dark'
+
+
+
 so $HOME/.config/nvim/plugins.vim
 so $HOME/.config/nvim/colorScheme.vim
 so $HOME/.config/nvim/defxConfig.vim
 so $HOME/.config/nvim/blamerConfig.vim
-" so $HOME/.config/nvim/defxConfigFloating.vim
 so $HOME/.config/nvim/cocExtensions/cocConfig.vim
 so $HOME/.config/nvim/cocExtensions/cocfzfpreviewConfig.vim
 

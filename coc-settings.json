@@ -1,6 +1,6 @@
 {
 	// 顏色顯示
-	"colors.filetypes": ["*"],
+	// "colors.filetypes": ["*"],
 
 	// 顯示擴展的 Emmet 縮寫作為建議。	"always"
 	"emmet.showExpandedAbbreviation": "always",

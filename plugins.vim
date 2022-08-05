@@ -49,9 +49,14 @@ call plug#begin('~/.vim/plugged')
 	" markDown
 	Plug 'godlygeek/tabular'
 	Plug 'preservim/vim-markdown'
+  Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 
 	" tailwind
 	Plug 'rodrigore/coc-tailwind-intellisense', {'do': 'npm install'}
 
+	" color preview
+	Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
 	" colorscheme
+	Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 call plug#end()
