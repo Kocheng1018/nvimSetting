@@ -123,25 +123,6 @@ map <silent> <Leader>c <Plug>(caw:hatpos:toggle)
 map <esc> :noh <CR>
 
 " ------------
-" :startify
-let g:startify_change_to_vcs_root = 0
-let g:startify_change_to_dir = 0
-let g:startify_custom_header = [
-        \'⠀       ⠀   (\__/) ',
-        \'            (•ㅅ•) ',
-        \'⠀       ＿ノヽ ノ＼＿ ',
-        \'⠀    `/ `/ ⌒Ｙ⌒ Ｙ   ヽ ',
-        \'⠀    ( 　(三ヽ人　 /  | ',
-        \'⠀    |　ﾉ⌒＼ ￣￣ヽ  ノ ',
-        \'⠀    ヽ＿＿＿＞､＿_／ ',
-        \'  ⠀      ｜( 王 ﾉ〈  (\__/) ',
-        \'    ⠀    /ﾐ`ー―彡 \  (•ㅅ•) ',
-        \'     ⠀  / ╰    ╯  \  /    \> ',
-        \ ]
-
-let g:startify_custom_footer = [ ]
-
-" ------------
 " alias replace all each ask
 nnoremap S :%s//gc<Left><Left><Left>
 
@@ -163,8 +144,7 @@ let g:vim_markdown_folding_disabled = 1
 let g:mkdp_auto_start = 0
 let g:mkdp_theme = 'dark'
 
-
-
+so $HOME/.config/nvim/startify.vim
 so $HOME/.config/nvim/plugins.vim
 so $HOME/.config/nvim/colorScheme.vim
 so $HOME/.config/nvim/defxConfig.vim

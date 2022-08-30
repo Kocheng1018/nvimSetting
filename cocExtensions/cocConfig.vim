@@ -157,3 +157,8 @@ nnoremap <silent><nowait> \p  :<C-u>CocListResume<CR>
 " -------coc-spell-checker---------
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
+
+" ------------- vue 3 support -----------
+let g:LanguageClient_serverCommands = {
+    \ 'vue': ['vls']
+    \ }
