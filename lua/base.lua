@@ -1,13 +1,17 @@
 vim.cmd("autocmd!")
 
+-- set encoding
 vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.fileencoding = 'utf-8'
 
-vim.wo.number = true
+vim.opt.cmdheight = 2
+vim.opt.mouse = 'a'
 
-vim.opt.title = true
-vim.opt.autoindent = true
+vim.wo.number = true -- show number on left
+
+vim.opt.title = true -- show file name on title
+vim.opt.autoindent = true 
 vim.opt.smartindent = true
 vim.opt.hlsearch = true
 vim.opt.backup = false

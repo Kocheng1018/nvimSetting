@@ -39,15 +39,16 @@ packer.startup(function(use)
   use 'nvim-telescope/telescope.nvim'
   use 'nvim-telescope/telescope-file-browser.nvim'
   use 'nvim-lua/plenary.nvim' -- Common utilities
-  --  use 'folke/zen-mode.nvim'
-  --  use({
-  --    "iamcco/markdown-preview.nvim",
-  --    run = function() vim.fn["mkdp#util#install"]() end,
-  --  })
+  use({
+    "iamcco/markdown-preview.nvim",
+    run = function() vim.fn["mkdp#util#install"]() end,
+  })
   use 'akinsho/nvim-bufferline.lua'
   use 'norcalli/nvim-colorizer.lua'
-  -- use 'github/copilot.vim'
 
-  use 'lewis6991/gitsigns.nvim'
+  use 'lewis6991/gitsigns.nvim' -- to show git diff before check
   use 'dinhhuy258/git.nvim' -- For git blame & browse
+
+  use 'JoosepAlviste/nvim-ts-context-commentstring' -- comment with FE
+  use 'tpope/vim-commentary' -- comment base
 end)

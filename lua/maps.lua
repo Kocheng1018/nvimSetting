@@ -13,9 +13,6 @@ keymap.set('n', 'dw', 'vb"_d')
 -- Select all
 keymap.set('n', '<C-a>', 'gg<S-v>G')
 
--- Save with root permission (not working for now)
---vim.api.nvim_create_user_command('W', 'w !sudo tee > /dev/null %', {})
-
 -- New tab
 keymap.set('n', 'te', ':tabedit')
 
@@ -24,9 +21,16 @@ keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
 
 -- Move window
-keymap.set('n', '<Space>', '<C-w>w')
+-- keymap.set('n', '<Space>', '<C-w>w')
 keymap.set('', '<C-h>', '<C-w>h')
 keymap.set('', '<C-k>', '<C-w>k')
 keymap.set('', '<C-j>', '<C-w>j')
 keymap.set('', '<C-l>', '<C-w>l')
 
+-- change word with RG
+keymap.set('n', 'S', ':%s//gc<left><left><left>')
+
+-- blur write return vim cmd
+keymap.set('', ':Q', ':q')
+keymap.set('', ':W', ':w')
+keymap.set('', ':Wq', ':wq')
