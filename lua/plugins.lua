@@ -44,13 +44,12 @@ packer.startup(function(use)
     run = function() vim.fn["mkdp#util#install"]() end,
   })
   use 'akinsho/nvim-bufferline.lua'
- --  use 'norcalli/nvim-colorizer.lua'
 
   use 'lewis6991/gitsigns.nvim' -- to show git diff before check
   use 'dinhhuy258/git.nvim' -- For git blame & browse
 
-  use 'JoosepAlviste/nvim-ts-context-commentstring' -- comment with FE
-  use 'tpope/vim-commentary' -- comment base
+  use 'JoosepAlviste/nvim-ts-context-commentstring' -- read code type to comment
+  use 'numToStr/Comment.nvim' -- base comment
 
   use {'rrethy/vim-hexokinase', run = 'cd ~/.local/share/nvim/site/pack/packer/start/vim-hexokinase && make hexokinase'}
 end)
