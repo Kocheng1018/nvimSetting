@@ -21,7 +21,6 @@ keymap.set('n', 'ss', ':split<Return><C-w>w', { silent = true })
 keymap.set('n', 'sv', ':vsplit<Return><C-w>w', { silent = true })
 
 -- Move window
--- keymap.set('n', '<Space>', '<C-w>w')
 keymap.set('', '<C-h>', '<C-w>h')
 keymap.set('', '<C-k>', '<C-w>k')
 keymap.set('', '<C-j>', '<C-w>j')
