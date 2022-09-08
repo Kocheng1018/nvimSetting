@@ -16,14 +16,10 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('n', '<space>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, bufopts)
-  
-  -- formatting on save
-  vim.cmd [[autocmd BufWritePre * lua vim.lsp.buf.formatting_sync()]]
 end
 
 local lsp_flags = {
-  -- This is the default in Nvim 0.7+
-  debounce_text_changes = 150,
+  debounce_text_changes = 100,
 }
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -35,15 +31,10 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
     'additionalTextEdits',
   }
 }
-require('lspconfig')['tsserver'].setup{
-  on_attach = on_attach,
-  flags = lsp_flags,
-  capabilities = capabilities,
-}
 
+-- volar 底層需要ts支援 js版本vue3專案無ts需轉到全域ts package
 local util = require 'lspconfig.util'
 local function get_typescript_server_path(root_dir)
-
   -- Alternative location if installed as root:
   local global_ts = '/opt/homebrew/Cellar/typescript/4.8.2/libexec/lib/node_modules/typescript/lib/tsserverlibrary.js'
   local found_ts = ''
@@ -60,6 +51,13 @@ local function get_typescript_server_path(root_dir)
   end
 end
 
+require('lspconfig')['tsserver'].setup{
+  on_attach = on_attach,
+  flags = lsp_flags,
+  capabilities = capabilities,
+}
+
+
 require('lspconfig')['volar'].setup{
   on_attach = on_attach,
   flags = lsp_flags,
@@ -67,4 +65,28 @@ require('lspconfig')['volar'].setup{
   on_new_config = function(new_config, new_root_dir)
     new_config.init_options.typescript.serverPath = get_typescript_server_path(new_root_dir)
   end,
+}
+
+require('lspconfig')['sumneko_lua'].setup{
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+        checkThirdParty = false
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
 }

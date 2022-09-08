@@ -9,6 +9,8 @@ vim.opt.cmdheight = 2
 vim.opt.mouse = 'a'
 
 vim.wo.number = true -- show number on left
+vim.wo.signcolumn = 'yes' -- number/yes/no/auto
+
 
 vim.opt.title = true -- show file name on title
 vim.opt.autoindent = true 
