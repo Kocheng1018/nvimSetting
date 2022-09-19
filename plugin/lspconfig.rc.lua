@@ -13,6 +13,7 @@ local on_attach = function(client, bufnr)
   -- Mappings.
   -- See `:help vim.lsp.*` for documentation on any of the below functions
   local bufopts = { noremap=true, silent=true, buffer=bufnr }
+  -- vim.keymap.set('n', '<space>cf', vim.lsp.buf.formatting(), bufopts)
   vim.keymap.set('n', '<space>wl', function()
     print(vim.inspect(vim.lsp.buf.list_workspace_folders()))
   end, bufopts)
@@ -36,7 +37,7 @@ capabilities.textDocument.completion.completionItem.resolveSupport = {
 local util = require 'lspconfig.util'
 local function get_typescript_server_path(root_dir)
   -- Alternative location if installed as root:
-  local global_ts = '/opt/homebrew/Cellar/typescript/4.8.2/libexec/lib/node_modules/typescript/lib/tsserverlibrary.js'
+  local global_ts = '/Users/userb014/.nvm/versions/node/v18.9.0/lib/node_modules/typescript/lib/tsserverlibrary.js'
   local found_ts = ''
   local function check_dir(path)
     found_ts =  util.path.join(path, 'node_modules', 'typescript', 'lib', 'tsserverlibrary.js')
