@@ -33,3 +33,4 @@ keymap.set('n', 'S', ':%s//gc<left><left><left>')
 keymap.set('', ':Q', ':q')
 keymap.set('', ':W', ':w')
 keymap.set('', ':Wq', ':wq')
+

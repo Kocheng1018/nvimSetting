@@ -39,12 +39,12 @@ dashboard.section.header.opts.hl = pick_color()
 
 dashboard.section.buttons.val = {
   -- dashboard.button("n", "📝 New File",     " :ene <BAR> startinsert <CR> "),
-  dashboard.button("r", "  Recent Files", " :Telescope oldfiles <CR> "),
-  dashboard.button("b", "🌳 File Browser", " :Telescope file_browser <CR> "),
-  dashboard.button("f", "🔎 Find Files",   " :Telescope find_files <CR> "),
-  dashboard.button("p", "✅ PackerSync",   " :PackerSync <CR>"),
-  dashboard.button("c", "✨ Change Theme", " :Telescope colorscheme <CR>"),
-  dashboard.button("s", "⚙️  Settings",     " :e $MYVIMRC | :cd %:p:h | :Telescope file_browser <CR> "),
+  dashboard.button("sf", "🌳 File Browser", " :Telescope file_browser <CR> "),
+  dashboard.button("<space>o", "  Recent Files", " :Telescope oldfiles <CR> "),
+  dashboard.button("<space>r", "🔎 Find Files",   " :Telescope live_grep <CR> "),
+  dashboard.button("<space>s", "✅ PackerSync",   " :PackerSync <CR>"),
+  dashboard.button("<space>c", "✨ Change Theme", " :Telescope colorscheme <CR>"),
+  dashboard.button("<space>s", "⚙️  Settings",     " :e $MYVIMRC | :cd %:p:h | :Telescope file_browser <CR> "),
   dashboard.button("q", "🛑 Quit NVIM",    " :qa<CR> "),
 }
 
