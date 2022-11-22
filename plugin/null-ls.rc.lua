@@ -5,6 +5,11 @@ null_ls.setup({
   debug = true,
   sources = {
     null_ls.builtins.formatting.eslint_d,
+    null_ls.builtins.formatting.prettierd,
+    -- 錯誤提示
+    -- null_ls.builtins.diagnostics.eslint_d.with({
+    --   diagnostics_format = '[eslint] #{m}\n(#{c})'
+    -- }),
   },
 })
 

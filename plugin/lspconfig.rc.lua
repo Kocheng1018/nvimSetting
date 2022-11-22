@@ -54,6 +54,8 @@ local function get_typescript_server_path(root_dir)
   end
 end
 
+require('lspconfig')['tailwindcss'].setup{}
+
 require('lspconfig')['tsserver'].setup{
   on_attach = on_attach,
   flags = lsp_flags,
